@@ -51,7 +51,7 @@ plt.grid(True)
 plt.show()
 
 #%%
-returns_long = returns.melt(var_name = 'Stock', value_name = 'Daily Return')
+returns_long = returns.melt(var_name = 'Stock', value_name = 'Daily Return') #reshapes the dataframe for use within Plotly
 fig = px.histogram(returns_long, x = 'Daily Return', color = 'Stock',
                    facet_col = 'Stock', facet_col_wrap=3, nbins = 50,
                    color_discrete_sequence= px.colors.qualitative.Set2)
